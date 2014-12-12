@@ -35,9 +35,10 @@ function interval(func, wait, times){
 };
 
 $(document).ready(function(){
-   $('#first-input').writeText('whois herrhansen.com', function(){
-       setTimeout(function(){
-           $('.terminal-answer').show();
-       }, 1000);
-   });
+    $('.window').draggable();
+    $('#first-input').writeText('whois herrhansen.com', function(){
+        setTimeout(function(){
+            $('.terminal-answer').show();
+        }, 1000);
+    });
 });

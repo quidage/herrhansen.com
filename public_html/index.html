@@ -22,6 +22,22 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        
+        <script>
+        function UnCryptMailto(s, shift) {
+            var n=0;
+            var r="";
+            for(var i=0;i<s.length;i++) { 
+                n=s.charCodeAt(i); 
+                if (n>=8364) {n = 128;}
+                r += String.fromCharCode(n-(shift)); 
+            }
+            return r;
+        }
+        function linkTo_UnCryptMailto(s, shift)	{
+            location.href=UnCryptMailto(s, shift);
+        }
+        </script>        
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -34,7 +50,7 @@
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </div>
                 <div class="terminal-window">
-                    user@herrhansen:/home/staff/# <span id="first-input" class="terminal-input"></span>
+                    guest@herrhansen:/tmp/# <span id="first-input" class="terminal-input"></span>
                     <div class="terminal-answer">
                         <br>
 <pre>
@@ -49,6 +65,8 @@
 Christian Hansen<br>
 Bramfelder Chaussee 4<br>
 22177 Hamburg<br>
++491637366190<br>
+<a href="javascript:linkTo_UnCryptMailto('ocknvq<kphqBjgttjcpugp0eqo', 2);">Mail me!</a>
                     </div>
                 </div>
             </div>
@@ -68,6 +86,8 @@ Bramfelder Chaussee 4<br>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
+        
+        <script src="js/vendor/jqueryui/jquery-ui.js"></script>
 
         <script src="js/main.js"></script>
 
