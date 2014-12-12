@@ -23,7 +23,7 @@ body {
 
 .window-header {
     border: 1px solid #b4b4b4;    
-    padding: 5px;
+    padding: 4px;
     width: 480px;
     height: 27px;
     background: rgb(238,238,238); /* Old browsers */
@@ -49,8 +49,13 @@ body {
     height: 320px;
     color: #3EFF30; 
     padding: 2px 5px;
+    font-size: 12px;
+    line-height: 14px;
 }
 
+.terminal-answer {
+    display: none;
+}
 
 
 
