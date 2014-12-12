@@ -7,11 +7,12 @@
             if(current < contentArray.length) {
                 elem.text(elem.text() + contentArray[current++]);
             } else {
+                clearTimeout();
                 if (typeof callback === 'function') { // make sure the callback is a function
                     callback.call(this); // brings the scope to the callback
                 } 
             }
-        }, 250, 10);
+        }, 180, 21);
     };
 
 })(jQuery);
@@ -35,7 +36,9 @@ function interval(func, wait, times){
 };
 
 $(document).ready(function(){
-   $('#first-input').writeText('whoami', function(){
-       $('.terminal-answer').show();
+   $('#first-input').writeText('whois herrhansen.com', function(){
+       setTimeout(function(){
+           $('.terminal-answer').show();
+       }, 1000);
    });
 });
