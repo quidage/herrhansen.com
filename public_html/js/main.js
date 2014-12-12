@@ -14,7 +14,6 @@
             }
         }, 180, 21);
     };
-
 })(jQuery);
 
 function interval(func, wait, times){
